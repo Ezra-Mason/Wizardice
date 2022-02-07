@@ -23,9 +23,8 @@ public class Dice : MonoBehaviour
     [SerializeField] private float _rerollForce;
     [SerializeField] private DiceFace[] _faces;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        _initialPosition = transform.position;
         _rigidbody.useGravity = false;
         _rolledValue = ElementType.NULL;
     }
@@ -33,10 +32,10 @@ public class Dice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+/*        if (Input.GetButtonDown("Fire1"))
         {
             RollDie();
-        }
+        }*/
 
         if (_rigidbody.IsSleeping() && _wasRolled && !_hasLanded)
         {
@@ -44,17 +43,20 @@ public class Dice : MonoBehaviour
             _rigidbody.useGravity = false;
             CheckFaces();
         }
-        else if (_rigidbody.IsSleeping() && _hasLanded && _rolledValue == ElementType.NULL)
+/*        else if (_rigidbody.IsSleeping() && _hasLanded && _rolledValue == ElementType.NULL)
         {
             Reroll();
-        }
+        }*/
     }
 
     public void RollDie()
     {
+        Debug.Log("Rolled dice");
         if (!_wasRolled && !_hasLanded)
         {
             _wasRolled = true;
+            Debug.Log("was rolled = " + _wasRolled);
+            Debug.Log("hasnt landed and hasnt been rolled");
             _rigidbody.useGravity = true;
             Vector3 randomTorque = new Vector3(Random.Range(0, _diceTorque), Random.Range(0, _diceTorque), Random.Range(0, _diceTorque));
             _rigidbody.AddTorque(randomTorque);
@@ -68,12 +70,14 @@ public class Dice : MonoBehaviour
 
     private void ResetDie()
     {
+        Debug.Log("Reset dice");
         _wasRolled = false;
         _hasLanded = false;
         _rigidbody.useGravity = false;
     }
     private void Reroll()
     {
+        Debug.Log("Rerolled dice");
         ResetDie();
         _wasRolled = true;
         _rigidbody.useGravity = true;
