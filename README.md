@@ -2,7 +2,8 @@
 Action game about dice combo's
 
 ## Gameplay
-- [ ] Player Movement
+### Player Controls
+- [X] Player Movement
 ### Casting Spells
 - [ ] Casting Pause
 - [ ] Focus meter
