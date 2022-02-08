@@ -11,6 +11,10 @@ public class DiceManager : MonoBehaviour
     [SerializeField] private List<Dice> _rolledDice;
     [SerializeField] private List<GameObject> _selectedDice;
     [SerializeField] private List<GameObject> _heldDice;
+    [SerializeField] private LayerMask _layerMask;
+    [SerializeField] private bool _isValidMousePosition;
+    [SerializeField] private Vector3 _target;
+    [SerializeField] private Dice _mouseOverDie;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +25,38 @@ public class DiceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 100, _layerMask))
+        {
+            _isValidMousePosition = true;
+            _target = hit.point;
+            if (hit.rigidbody.gameObject.TryGetComponent<Dice>(out Dice die))
+            {
+                _mouseOverDie = die;
+            }
+            else
+            {
+                _mouseOverDie = null;
+            }
+            Debug.DrawLine(ray.origin, _target, Color.cyan);
+        }
+        else
+        {
+            _isValidMousePosition = false;
+        }
 
+        if (_isValidMousePosition && _mouseOverDie !=null && Input.GetButtonDown("Fire1"))
+        {
+            if (_selectedDice.Contains(_mouseOverDie.gameObject))
+            {
+                _selectedDice.Remove(_mouseOverDie.gameObject);
+            }
+            else
+            {
+                _selectedDice.Add(_mouseOverDie.gameObject);
+            }
+        }
     }
     public void OnStartCasting()
     {

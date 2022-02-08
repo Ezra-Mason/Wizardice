@@ -564,6 +564,9 @@ MonoBehaviour:
   _rolledDice: []
   _selectedDice: []
   _heldDice: []
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &7921760916861552606
 MonoBehaviour:
   m_ObjectHideFlags: 0
