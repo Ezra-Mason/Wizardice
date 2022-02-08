@@ -566,7 +566,10 @@ MonoBehaviour:
   _heldDice: []
   _layerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 128
+  _isValidMousePosition: 0
+  _target: {x: 0, y: 0, z: 0}
+  _mouseOverDie: {fileID: 0}
 --- !u!114 &7921760916861552606
 MonoBehaviour:
   m_ObjectHideFlags: 0

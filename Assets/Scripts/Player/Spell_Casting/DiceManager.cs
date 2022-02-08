@@ -25,19 +25,24 @@ public class DiceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Mouse input for selecting dice
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 100, _layerMask))
         {
             _isValidMousePosition = true;
             _target = hit.point;
-            if (hit.rigidbody.gameObject.TryGetComponent<Dice>(out Dice die))
+            if (hit.rigidbody != null)
             {
-                _mouseOverDie = die;
-            }
-            else
-            {
-                _mouseOverDie = null;
+                if (hit.rigidbody.gameObject.TryGetComponent<Dice>(out Dice die))
+                {
+                    _mouseOverDie = die;
+                }
+                else
+                {
+                    _mouseOverDie = null;
+                }
+
             }
             Debug.DrawLine(ray.origin, _target, Color.cyan);
         }
@@ -46,6 +51,7 @@ public class DiceManager : MonoBehaviour
             _isValidMousePosition = false;
         }
 
+        //toggle dice selection on click
         if (_isValidMousePosition && _mouseOverDie !=null && Input.GetButtonDown("Fire1"))
         {
             if (_selectedDice.Contains(_mouseOverDie.gameObject))
