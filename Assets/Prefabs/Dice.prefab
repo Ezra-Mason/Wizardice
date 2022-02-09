@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1371940128791986755}
   - component: {fileID: 1322669975581796016}
   - component: {fileID: 6292526124606750446}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7434416376946364187}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3292219900487341475
 MeshFilter:
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 8148169920527892034}
   - component: {fileID: 8065491780176568125}
   - component: {fileID: 734872993749919587}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,11 +139,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156563956808434318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7434416376946364187}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4439448782288039978
 MeshFilter:
@@ -222,6 +222,20 @@ MonoBehaviour:
   _tag: DiceBox
   _value: 1
   _onGround: 0
+--- !u!64 &8541351899356867766
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221602001950978124}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
 --- !u!1 &3188608714193354834
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +249,7 @@ GameObject:
   - component: {fileID: 8272437434670418976}
   - component: {fileID: 2248976877250817507}
   - component: {fileID: 1007744571216322182}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Air
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +268,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7434416376946364187}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4185165988352021002
 MeshFilter:
@@ -346,7 +360,7 @@ GameObject:
   - component: {fileID: 7998613340924456321}
   - component: {fileID: 841949056573729572}
   - component: {fileID: 7973732304482597750}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +379,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7434416376946364187}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &684657822309778262
 MeshFilter:
@@ -455,7 +469,7 @@ GameObject:
   - component: {fileID: 7434416376946364187}
   - component: {fileID: 7434416376946364185}
   - component: {fileID: 2349235395000685036}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,6 +487,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1558078261888936694}
   - {fileID: 6964503683532483831}
   - {fileID: 8714216123702164662}
   - {fileID: 1057441450543022093}
@@ -552,7 +567,7 @@ GameObject:
   - component: {fileID: 2957174540758352094}
   - component: {fileID: 5389038759099740630}
   - component: {fileID: 5710352839057539496}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,11 +582,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7817670886375942806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7434416376946364187}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2416868784470041255
 MeshFilter:
@@ -663,7 +678,7 @@ GameObject:
   - component: {fileID: 1012233874214677027}
   - component: {fileID: 2676773175719458989}
   - component: {fileID: 9087036462380822723}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +697,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7434416376946364187}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8414117803879570905
 MeshFilter:
@@ -761,6 +776,89 @@ MonoBehaviour:
   _tag: DiceBox
   _value: 3
   _onGround: 0
+--- !u!1001 &1303192385481116957
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7434416376946364187}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_Name
+      value: Dice2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+--- !u!4 &1558078261888936694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+  m_PrefabInstance: {fileID: 1303192385481116957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2221602001950978124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4b14609d7a60a9c4f919625917d85e7f, type: 3}
+  m_PrefabInstance: {fileID: 1303192385481116957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7434416376529750812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -770,7 +868,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7e7503800601a7445822d4d055770103, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e7503800601a7445822d4d055770103, type: 3}
       propertyPath: m_LocalPosition.x
@@ -819,18 +917,18 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 7e7503800601a7445822d4d055770103, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cdf4fe1a2466b7949bdb2abf4356c096, type: 2}
+      objectReference: {fileID: 2100000, guid: ea15bb9603c225145a77cde5db1caef5, type: 2}
     - target: {fileID: 919132149155446097, guid: 7e7503800601a7445822d4d055770103, type: 3}
       propertyPath: m_Name
       value: Dice
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7e7503800601a7445822d4d055770103, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7e7503800601a7445822d4d055770103, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e7503800601a7445822d4d055770103, type: 3}
