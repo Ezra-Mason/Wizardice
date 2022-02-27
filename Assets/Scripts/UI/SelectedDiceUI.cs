@@ -21,9 +21,17 @@ public class SelectedDiceUI : MonoBehaviour
         if (_typeRuntimeCollection.Count() != _counter)
         {
             _counter = _typeRuntimeCollection.Count();
-            if (_spellBook.CalculateSpell(_typeRuntimeCollection.List()) != null)
+            if (_counter>0)
             {
-                _text.text = _spellBook.CalculateSpell(_typeRuntimeCollection.List()).Name;
+                if (_spellBook.CalculateSpell(_typeRuntimeCollection.List()) != null)
+                {
+                    _text.text = _spellBook.CalculateSpell(_typeRuntimeCollection.List()).Name;
+                }
+                else
+                {
+                    _text.text = "~";
+                }
+
             }
             else
             {

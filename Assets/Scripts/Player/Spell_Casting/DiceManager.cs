@@ -59,6 +59,7 @@ public class DiceManager : MonoBehaviour
             if (_selectedDice.Contains(_mouseOverDie.gameObject))
             {
                 _selectedDice.Remove(_mouseOverDie.gameObject);
+                _mouseOverDie.DeselectDice();
                 _typeRuntimeCollection.Remove(_mouseOverDie.RolledValue);
                 Debug.Log("removed " + _mouseOverDie.RolledValue);
                 CalculateSpell();
@@ -67,6 +68,7 @@ public class DiceManager : MonoBehaviour
             else
             {
                 _selectedDice.Add(_mouseOverDie.gameObject);
+                _mouseOverDie.SelectDice();
                 _typeRuntimeCollection.Add(_mouseOverDie.RolledValue);
                 Debug.Log("added " + _mouseOverDie.RolledValue);
                 CalculateSpell();

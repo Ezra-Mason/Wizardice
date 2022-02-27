@@ -5,8 +5,17 @@ using UnityEngine;
 
 public abstract class RuntimeCollection<T> : ScriptableObject
 {
-    protected List<T> _items = new List<T>();    
+    protected List<T> _items = new List<T>();
 
+    private void Awake()
+    {
+        _items.Clear();
+        _items = new List<T>();
+    }
+    private void OnDisable()
+    {
+        _items.Clear();
+    }
     public void Add(T t)
     {
         if (!_items.Contains(t))

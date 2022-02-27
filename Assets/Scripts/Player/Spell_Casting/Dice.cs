@@ -23,6 +23,9 @@ public class Dice : MonoBehaviour
     [SerializeField] private float _diceTorque;
     [SerializeField] private float _rerollForce;
     [SerializeField] private DiceFace[] _faces;
+    [SerializeField] private Material _normal;
+    [SerializeField] private Material _selected;
+    [SerializeField] private MeshRenderer _mesh;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -102,4 +105,13 @@ public class Dice : MonoBehaviour
             }
         }
     }
+    public void SelectDice()
+    {
+        _mesh.material = _selected;
+    }
+    public void DeselectDice()
+    {
+        _mesh.material = _normal;
+    }
+
 }
