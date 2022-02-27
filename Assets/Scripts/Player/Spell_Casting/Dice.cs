@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
 public enum ElementType
 {
     NULL,
@@ -18,6 +18,7 @@ public class Dice : MonoBehaviour
     [SerializeField] private Vector3 _initialPosition;
     [SerializeField] private bool _wasRolled;
     [SerializeField] private bool _hasLanded;
+    public ElementType RolledValue => _rolledValue;
     [SerializeField] private ElementType _rolledValue;
     [SerializeField] private float _diceTorque;
     [SerializeField] private float _rerollForce;

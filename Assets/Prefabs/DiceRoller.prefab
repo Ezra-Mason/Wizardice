@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7601344460722024746}
   - component: {fileID: 975024264608646214}
   - component: {fileID: 1813174765489611705}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Plane (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 6687377632996197590}
   - component: {fileID: 7921105100975019499}
   - component: {fileID: 3671148993512746803}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Plane
   m_TagString: DiceBox
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 3493380573718267704}
   - component: {fileID: 2537109063912885998}
   - component: {fileID: 4158551081252960165}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 5419071275693286025}
   - component: {fileID: 3233027848630753097}
   - component: {fileID: 1876937846930406436}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4690818419433694636}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -462,7 +462,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5046311778007099074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 4280423490107473693}
   - component: {fileID: 8524012199971164346}
   - component: {fileID: 7921760916861552606}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: DiceRoller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,8 +561,10 @@ MonoBehaviour:
   _spawnLocation: {fileID: 4690818419433694636}
   _randomRollPosition: 2
   _diceAmount: 3
+  _rolledDiceObjects: []
   _rolledDice: []
   _selectedDice: []
+  _typeRuntimeCollection: {fileID: 11400000, guid: d58f6d9902f1a0848979664e3b42f26c, type: 2}
   _heldDice: []
   _layerMask:
     serializedVersion: 2
@@ -570,6 +572,7 @@ MonoBehaviour:
   _isValidMousePosition: 0
   _target: {x: 0, y: 0, z: 0}
   _mouseOverDie: {fileID: 0}
+  _spellbook: {fileID: 11400000, guid: 8dd23ea711e713948b2c4cea67a33f0e, type: 2}
 --- !u!114 &7921760916861552606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,7 +625,7 @@ GameObject:
   - component: {fileID: 7323443824425448774}
   - component: {fileID: 1065847084406579119}
   - component: {fileID: 5182834393882427349}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 844217237253501577}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}

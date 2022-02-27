@@ -6,7 +6,6 @@ public class PlayerSpellCasting : MonoBehaviour
 {
     [SerializeField] private bool _isCasting;
     [SerializeField] private GameEvent _startedCasting;
-
     // Start is called before the first frame update
     void Start()
     {
